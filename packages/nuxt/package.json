@@ -1,0 +1,33 @@
+{
+  "name": "@vue-storefront/eslint-config-nuxt",
+  "version": "0.0.1",
+  "license": "MIT",
+  "homepage": "https://github.com/vuestorefront/eslint-config",
+  "contributors": [
+    {
+      "name": "Heitor Ramon Ribeiro",
+      "email": "heitor.ramon@gmail.com",
+      "url": "https://heitor.co"
+    }
+  ],
+  "keywords": [
+    "eslint-config"
+  ],
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "update:packages": "npx ncu -u --packageFile package.json",
+    "update:check": "npx ncu --packageFile package.json"
+  },
+  "peerDependencies": {
+    "eslint": ">=8.x.x"
+  },
+  "dependencies": {
+    "@nuxtjs/eslint-config-typescript": "latest"
+  },
+  "devDependencies": {
+    "eslint": "^8.16.0"
+  }
+}

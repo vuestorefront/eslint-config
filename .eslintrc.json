@@ -1,0 +1,16 @@
+{
+  "root": true,
+  "extends": ["@vue-storefront/eslint-config-base"],
+  "parserOptions": {
+    "project": "tsconfig.json",
+    "ecmaFeatures": {
+      "globalReturn": false,
+      "impliedStrict": false,
+      "jsx": false
+    }
+  },
+  "rules": {
+    "unicorn/prefer-module": "off"
+  },
+  "ignorePatterns": ["tsconfig.json", ".eslintrc.json"]
+}

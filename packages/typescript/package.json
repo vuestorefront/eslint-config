@@ -1,0 +1,39 @@
+{
+  "name": "@vue-storefront/eslint-config-ts",
+  "version": "0.0.1",
+  "description": "",
+  "author": "Heitor Ramon Ribeiro <heitor.ramon@gmail.com> (https://vuestorefront.io/)",
+  "license": "MIT",
+  "homepage": "https://github.com/vuestorefront/eslint-config",
+  "keywords": [
+    "eslint-config"
+  ],
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "update:packages": "npx ncu -u --packageFile package.json",
+    "update:check": "npx ncu --packageFile package.json"
+  },
+  "peerDependencies": {
+    "eslint": ">=8.x.x",
+    "typescript": ">=4.x"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.26.0",
+    "@typescript-eslint/parser": "^5.26.0",
+    "@vue-storefront/eslint-config-base": "workspace:*",
+    "@vue-storefront/eslint-config-ts": "workspace:*",
+    "@vue/eslint-config-typescript": "^10.0.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-import-resolver-typescript": "^2.7.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-unicorn": "^42.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.16.0"
+  }
+}

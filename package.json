@@ -1,0 +1,46 @@
+{
+  "name": "@vue-stoerfront/eslint-config-monorepo",
+  "version": "0.0.1",
+  "private": true,
+  "packageManager": "pnpm@7.1.6",
+  "license": "MIT",
+  "homepage": "https://github.com/vuestorefront/eslint-config",
+  "contributors": [
+    {
+      "name": "Heitor Ramon Ribeiro",
+      "email": "heitor.ramon@gmail.com",
+      "url": "https://heitor.co"
+    }
+  ],
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "prepare": "pnpm -r run stub",
+    "update:packages": "pnpm -r run update:packages",
+    "update:check": "pnpm -r run update:check",
+    "release": "bumpp package.json packages/*/package.json --commit --push --tag && pnpm -r publish --access public"
+  },
+  "devDependencies": {
+    "@vue-storefront/eslint-config-base": "*",
+    "bumpp": "^7.1.1",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^12.4.2",
+    "npm-check-updates": "^13.0.3",
+    "prettier": "^2.6.2"
+  },
+  "husky": {
+    "hooks": {
+      "prepare-commit-msg": "exec < /dev/tty && npx cz --hook || true"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts}": "eslint --cache --fix"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
