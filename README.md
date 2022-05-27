@@ -2,71 +2,121 @@
 
 [![npm](https://img.shields.io/npm/v/@vue-storefront/eslint-config?color=a1b858&label=)](https://npmjs.com/package/@vue-storefront/eslint-config)
 
+Eslint configuration for:
+- JavaScript
+- Typescript
+- Nuxt 3
+- Nuxt 2
+- Vue 3
+- Vue 2
+
+
+For this eslint config package, we enable the following community standards:
 - AirBnb
 - Prettier
+
+This configuration provides eslint rules for the following:
 - TypeScript
 - Vue
 - Nuxt
-- Lint also for json, yaml, markdown
+- JSON
+- YAML / YML
+- Markdown
 
 ## Usage
 
-### Install
-
+### Base Config
+#### Install
 ```bash
-pnpm add -D eslint @vue-storefront/eslint-config
+pnpm add -D eslint @vue-storefront/eslint-config-base
 ```
 
-### Config `.eslintrc`
-
-Base
+#### Config `.eslintrc`
 ```json
 {
   "extends": "@vue-storefront-base"
 }
 ```
 
-Nuxt 3
+### TypeScript Config
+#### Install
+```bash
+pnpm add -D eslint @vue-storefront/eslint-config-typescript
+```
+
+#### Config `.eslintrc`
+```json
+{
+  "extends": "@vue-storefront-typescript"
+}
+```
+
+### Nuxt 3 Config
+#### Install
+```bash
+pnpm add -D eslint @vue-storefront/eslint-config-nuxt
+```
+
+#### Config `.eslintrc`
 ```json
 {
   "extends": "@vue-storefront-nuxt"
 }
 ```
 
+### Nuxt 2 Config
+#### Install
+```bash
+pnpm add -D eslint @vue-storefront/eslint-config-nuxt2
+```
 
+#### Config `.eslintrc`
 ```json
 {
-  "extends": "@vue-storefront"
+  "extends": "@vue-storefront-nuxt2"
 }
 ```
 
-> You don't need `.eslintignore` normally as it has been provided by the preset.
+### Vue 3 Config
+#### Install
+```bash
+pnpm add -D eslint @vue-storefront/eslint-config-vue
+```
 
-### Add script for package.json
-
-For example:
-
+#### Config `.eslintrc`
 ```json
 {
-  "scripts": {
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
-  }
+  "extends": "@vue-storefront-vue"
+}
+```
+
+### Vue 2 Config
+#### Install
+
+```bash
+pnpm add -D eslint @vue-storefront/eslint-config-vue2
+```
+
+#### Config `.eslintrc`
+```json
+{
+  "extends": "@vue-storefront-vue2"
 }
 ```
 
 ### Config VS Code auto fix
 
-Create `.vscode/settings.json`
+Update your `.vscode/settings.json` and add the following
 
 ```json
 {
-  "prettier.enable": false,
+  "prettier.enable": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   }
 }
 ```
+
 ## License
 
 MIT
