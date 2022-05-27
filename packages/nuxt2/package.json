@@ -1,5 +1,5 @@
 {
-  "name": "@vue-storefront/eslint-config-nuxt",
+  "name": "@vue-storefront/eslint-config-nuxt2",
   "version": "0.0.1",
   "license": "MIT",
   "homepage": "https://github.com/vuestorefront/eslint-config",
@@ -31,7 +31,7 @@
     "@typescript-eslint/parser": "^5.26.0",
     "@vue-storefront/eslint-config-base": "workspace:*",
     "@vue-storefront/eslint-config-ts": "workspace:*",
-    "@vue-storefront/eslint-config-vue": "latest",
+    "@vue-storefront/eslint-config-vue2": "latest",
     "@vue/eslint-config-typescript": "^10.0.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-airbnb-typescript": "^17.0.0",

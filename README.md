@@ -19,6 +19,21 @@ pnpm add -D eslint @vue-storefront/eslint-config
 
 ### Config `.eslintrc`
 
+Base
+```json
+{
+  "extends": "@vue-storefront-base"
+}
+```
+
+Nuxt 3
+```json
+{
+  "extends": "@vue-storefront-nuxt"
+}
+```
+
+
 ```json
 {
   "extends": "@vue-storefront"
