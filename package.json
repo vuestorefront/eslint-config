@@ -13,37 +13,27 @@
     }
   ],
   "scripts": {
-    "commit": "cz",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "release": "bumpp package.json packages/*/package.json --commit \"feat: release new version \" --push --tag && pnpm -r publish --access public",
+    "release": "bumpp package.json packages/*/package.json --commit \"chore: release new version \" --push --tag && pnpm -r publish --access public",
     "update:check": "pnpm -r run update:check",
-    "update:packages": "pnpm -r run update:packages"
+    "update:packages": "pnpm -r run update:packages",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.0.1",
     "@commitlint/config-conventional": "^17.0.0",
     "@vue-storefront/eslint-config-base": "*",
+    "@vue-storefront/eslint-config-nuxt": "workspace:*",
     "bumpp": "^7.1.1",
-    "commitizen": "^4.2.4",
-    "cz-conventional-changelog": "^3.3.0",
+    "commitlint-plugin-workspace-scopes": "^1.1.0",
     "husky": "^8.0.1",
     "lint-staged": "^12.4.2",
     "npm-check-updates": "^13.0.3",
     "prettier": "^2.6.2"
   },
-  "husky": {
-    "hooks": {
-      "commit-msg": "exec < /dev/tty && npx commitlint --edit $1 || true",
-      "prepare-commit-msg": "exec < /dev/tty && npx cz --hook || true"
-    }
-  },
   "lint-staged": {
-    "*.{js,ts}": "eslint --cache --fix"
-  },
-  "config": {
-    "commitizen": {
-      "path": "cz-conventional-changelog"
-    }
+    "*.*": "eslint --cache --fix",
+    "*.{js,css,md}": "prettier --write"
   }
 }
