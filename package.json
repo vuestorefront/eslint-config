@@ -13,13 +13,16 @@
     }
   ],
   "scripts": {
+    "commit": "cz",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "update:packages": "pnpm -r run update:packages",
+    "release": "bumpp package.json packages/*/package.json --commit \"feat: release new version \" --push --tag && pnpm -r publish --access public",
     "update:check": "pnpm -r run update:check",
-    "release": "bumpp package.json packages/*/package.json --commit --push --tag && pnpm -r publish --access public"
+    "update:packages": "pnpm -r run update:packages"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.0.1",
+    "@commitlint/config-conventional": "^17.0.0",
     "@vue-storefront/eslint-config-base": "*",
     "bumpp": "^7.1.1",
     "commitizen": "^4.2.4",
@@ -31,6 +34,7 @@
   },
   "husky": {
     "hooks": {
+      "commit-msg": "exec < /dev/tty && npx commitlint --edit $1 || true",
       "prepare-commit-msg": "exec < /dev/tty && npx cz --hook || true"
     }
   },
@@ -39,7 +43,7 @@
   },
   "config": {
     "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
+      "path": "cz-conventional-changelog"
     }
   }
 }
