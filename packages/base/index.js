@@ -265,6 +265,7 @@ module.exports = {
     'n/no-path-concat': 'error',
     'n/process-exit-as-throw': 'error',
     'n/no-missing-import': 'off',
+    'n/no-unsupported-features/es-syntax': 'off',
 // endregion
     // region YML RULES
     'yml/quotes': ['error', { prefer: 'single', avoidEscape: false }],
