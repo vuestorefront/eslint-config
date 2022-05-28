@@ -16,19 +16,19 @@ module.exports = {
     },
   },
   overrides:
-  [...basic.overrides,
-    {
-      files: ['*.d.ts'],
-      rules: {
-        'import/no-duplicates': 'off',
+    [...basic.overrides,
+      {
+        files: ['*.d.ts'],
+        rules: {
+          'import/no-duplicates': 'off',
+        },
       },
-    },
-    {
-      files: ['*.js'],
-      rules: {
-        '@typescript-eslint/no-var-requires': 'off',
+      {
+        files: ['*.js'],
+        rules: {
+          '@typescript-eslint/no-var-requires': 'off',
+        },
       },
-    },
     ],
   rules: {
     '@typescript-eslint/no-use-before-define': 'off',
@@ -59,6 +59,10 @@ module.exports = {
         format: ['PascalCase', 'UPPER_CASE'],
       },
     ],
+    '@typescript-eslint/no-unsafe-call': 'off',
+    '@typescript-eslint/no-unsafe-assignment': 'off',
+    '@typescript-eslint/no-unsafe-member-access': 'off',
+    '@typescript-eslint/unbound-method': 'off',
     'import/no-unresolved': 'error',
   },
   settings: {

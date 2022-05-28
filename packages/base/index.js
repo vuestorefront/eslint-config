@@ -219,18 +219,6 @@ module.exports = {
         ignoreStrings: true,
       },
     ],
-    'no-param-reassign': [
-      'error',
-      {
-        props: true,
-        ignorePropertyModificationsFor: [
-          'state', // for vuex state
-          'acc', // for reduce accumulators
-          'e', // for e.returnvalue
-          'options', // for decorators
-        ],
-      },
-    ],
     'no-var': 'warn',
     'object-shorthand': ['warn', 'properties'],
     'spaced-comment': [
@@ -266,6 +254,7 @@ module.exports = {
       exports: 'always-multiline',
       functions: 'always-multiline',
     }],
+    'no-param-reassign': 'off',
     // endregion
 // region N RULES
     'n/handle-callback-err': ['error', '^(err|error)$'],
@@ -275,6 +264,7 @@ module.exports = {
     'n/no-new-require': 'error',
     'n/no-path-concat': 'error',
     'n/process-exit-as-throw': 'error',
+    'n/no-missing-import': 'off',
 // endregion
     // region YML RULES
     'yml/quotes': ['error', { prefer: 'single', avoidEscape: false }],
@@ -282,12 +272,13 @@ module.exports = {
     // endregion
     'promise/param-names': 'error',
 
+    'unicorn/prefer-module': 'off',
     'unicorn/filename-case': [
       'error',
       {
         'cases': {
           'camelCase': true,
-          'pascalCase': false,
+          'pascalCase': true,
           'kebabCase': false,
         },
         'ignore': [
