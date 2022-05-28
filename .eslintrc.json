@@ -1,6 +1,6 @@
 {
   "root": true,
-  "extends": ["@vue-storefront/eslint-config-nuxt"],
+  "extends": ["@vue-storefront/eslint-config-base"],
   "parserOptions": {
     "project": "tsconfig.json",
     "ecmaFeatures": {

@@ -7,7 +7,6 @@ importers:
       '@commitlint/cli': ^17.0.1
       '@commitlint/config-conventional': ^17.0.0
       '@vue-storefront/eslint-config-base': '*'
-      '@vue-storefront/eslint-config-nuxt': workspace:*
       bumpp: ^7.1.1
       commitlint-plugin-workspace-scopes: ^1.1.0
       husky: ^8.0.1
@@ -18,7 +17,6 @@ importers:
       '@commitlint/cli': 17.0.1
       '@commitlint/config-conventional': 17.0.0
       '@vue-storefront/eslint-config-base': link:packages/base
-      '@vue-storefront/eslint-config-nuxt': link:packages/nuxt
       bumpp: 7.1.1
       commitlint-plugin-workspace-scopes: 1.1.0
       husky: 8.0.1
