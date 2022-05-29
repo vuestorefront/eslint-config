@@ -37,11 +37,11 @@ jobs:
         env:
           NODE_AUTH_TOKEN: '${{ secrets.NPM_TOKEN }}'
         run: |
-          echo "" >> .npmrc\
+          echo "shamefully-hoist=true" >> .npmrc\
+          echo "auto-install-peers=true" >> .npmrc\
+          echo "legacy-peer-deps=true" >> .npmrc\
           && echo "//registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN}" >> .npmrc\
-          && echo "" >> .npmrc\
-          && echo "@vue-storefront:registry=https://registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN"}">> .npmrc\
-          && echo "" >> .npmrc
+          && echo "@vue-storefront:registry=https://registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN}">> .npmrc\
 
       - name: Install Packages
         uses: pnpm/action-setup@master

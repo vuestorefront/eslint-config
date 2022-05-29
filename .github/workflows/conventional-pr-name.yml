@@ -20,6 +20,14 @@ jobs:
         with:
           node-version: '16'
 
+      - name: Create .npmrc
+        env:
+          NODE_AUTH_TOKEN: '${{ secrets.NPM_TOKEN }}'
+        run: |
+          echo "shamefully-hoist=true" >> .npmrc\
+          echo "auto-install-peers=true" >> .npmrc\
+          echo "legacy-peer-deps=true" >> .npmrc\
+
       - name: Install Packages
         uses: pnpm/action-setup@master
         with:
