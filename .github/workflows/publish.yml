@@ -29,8 +29,20 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16
+          registry-url: 'https://registry.npmjs.org/'
+          scope: '@vue-storefront'
 
-      - name: Setup pnpm cache
+      - name: Create .npmrc
+        env:
+          NODE_AUTH_TOKEN: '${{ secrets.NPM_TOKEN }}'
+        run: |
+          echo "" >> .npmrc\
+          && echo "//registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN}" >> .npmrc\
+          && echo "" >> .npmrc\
+          && echo "@vue-storefront:registry=https://registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN"}">> .npmrc
+          && echo "" >> .npmrc
+
+      - name: Setup PNPM cache
         uses: actions/cache@v3
         with:
           path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
@@ -38,7 +50,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
 
-      - name: Package Install
+      - name: Install Packages
         uses: pnpm/action-setup
         with:
           node-version: '16'
@@ -48,10 +60,7 @@ jobs:
               args: [--frozen-lockfile]
 
       - name: Bump Version & Push
-        uses: actions/setup-node@v3
-        with:
-          node-version: '16'
-      - run: |
+        run: |
           npx bumpp ${{ github.event.inputs.bumpType }}\
           "package.json"\
           "packages/*/package.json"\
@@ -60,19 +69,6 @@ jobs:
           --tag
 
       - name: Publish Package
-        uses: actions/setup-node@v3
-        with:
-          node-version: '16'
-          registry-url: 'https://registry.npmjs.org/'
-          scope: '@vue-storefront'
-      - run: |
-          echo "" >> .npmrc\
-          && echo "//registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN}" >> .npmrc\
-          && echo "" >> .npmrc\
-          && echo "@vue-storefront:registry=https://registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN"}">> .npmrc
-          && echo "" >> .npmrc
-        env:
-          NODE_AUTH_TOKEN: '${{ secrets.NPM_TOKEN }}'
-      - run: pnpm -r publish --access public
+        run: pnpm -r publish --access public
         env:
           NODE_AUTH_TOKEN: '${{ secrets.NPM_TOKEN }}'
