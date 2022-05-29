@@ -43,22 +43,27 @@ jobs:
           && echo "@vue-storefront:registry=https://registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN"}">> .npmrc
           && echo "" >> .npmrc
 
-      - name: Setup PNPM cache
-        uses: actions/cache@v3
-        with:
-          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
-
       - name: Install Packages
-        uses: pnpm/action-setup
+        uses: pnpm/action-setup@master
         with:
           node-version: '16'
           version: 7
           run_install: |
             - recursive: true
               args: [--frozen-lockfile]
+
+      - name: Get PNPM store directory
+        id: pnpm-cache
+        run: |
+          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
+
+      - name: Fetch cached files
+        uses: actions/cache@v3
+        with:
+          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
 
       - name: Bump Version & Push
         run: |

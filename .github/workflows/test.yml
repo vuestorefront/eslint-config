@@ -13,45 +13,7 @@ jobs:
     name: Prepare dependencies
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Install Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16
-
-      - name: Setup PNPM cache
-        uses: actions/cache@v3
-        with:
-          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
-
-        - name: Install Packages
-          uses: pnpm/action-setup
-          with:
-            node-version: '16'
-            version: 7
-            run_install: |
-              - recursive: true
-                args: [--frozen-lockfile]
-
-      - name: Setup PNPM cache
-        uses: actions/cache@v3
-        with:
-          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
-
-  lint:
-    name: Lint
-    needs: prepare_dependencies
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
+      - name: Git Checkout
         uses: actions/checkout@v3
 
       - name: Setup node
@@ -60,12 +22,53 @@ jobs:
           node-version: '16'
 
       - name: Install Packages
-        uses: pnpm/action-setup
+        uses: pnpm/action-setup@master
         with:
           node-version: '16'
           version: 7
+          run_install: |
+            - recursive: true
+              args: [--frozen-lockfile]
 
-      - name: Setup PNPM cache
+      - name: Get PNPM store directory
+        id: pnpm-cache
+        run: |
+          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
+
+      - name: Fetch cached files
+        uses: actions/cache@v3
+        with:
+          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+  lint:
+    name: Lint
+    needs: prepare_dependencies
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Install Packages
+        uses: pnpm/action-setup@master
+        with:
+          node-version: '16'
+          version: 7
+          run_install: |
+            - recursive: true
+              args: [--frozen-lockfile]
+
+      - name: Get PNPM store directory
+        id: pnpm-cache
+        run: |
+          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
+
+      - name: Fetch cached files
         uses: actions/cache@v3
         with:
           path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
@@ -73,5 +76,4 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
 
-      - name: Run linter
-        run: pnpm run lint
+      - run: pnpm run lint
