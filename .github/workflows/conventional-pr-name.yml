@@ -1,7 +1,8 @@
 name: Commitlint PR Title
+
 on:
   pull_request:
-    types: [opened, edited, reopened, synchronize]
+    types: ['opened', 'edited', 'reopened', 'synchronize']
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
@@ -12,14 +13,28 @@ jobs:
     name: Validate PR Title (conventional-commit)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v3
 
       - name: Setup node
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: '16'
 
-      - name: Install Dependencies
-        run: yarn
+      - name: Setup PNPM cache
+        uses: actions/cache@v3
+        with:
+          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
 
-      - uses: JulienKode/pull-request-name-linter-action@v0.2.0
+      - name: Install Packages
+        uses: pnpm/action-setup
+        with:
+          node-version: '16'
+          version: 7
+          run_install: |
+            - recursive: true
+              args: [--frozen-lockfile]
+
+      - uses: JulienKode/pull-request-name-linter-action@v0.5.0

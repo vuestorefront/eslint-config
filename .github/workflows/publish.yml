@@ -15,6 +15,7 @@ on:
           - major
           - minor
           - patch
+
 jobs:
   publishing:
     name: Package Publishing
