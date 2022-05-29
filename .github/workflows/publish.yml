@@ -40,7 +40,7 @@ jobs:
           echo "" >> .npmrc\
           && echo "//registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN}" >> .npmrc\
           && echo "" >> .npmrc\
-          && echo "@vue-storefront:registry=https://registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN"}">> .npmrc
+          && echo "@vue-storefront:registry=https://registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN"}">> .npmrc\
           && echo "" >> .npmrc
 
       - name: Install Packages
