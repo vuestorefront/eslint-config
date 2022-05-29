@@ -24,31 +24,49 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Setup pnpm cache
+        uses: actions/cache@v3
+        with:
+          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
       - name: Package Install
+        uses: pnpm/action-setup
+        with:
+          node-version: '16'
+          version: 7
+          run_install: |
+            - recursive: true
+              args: [--frozen-lockfile]
+
+      - name: Bump Version & Push
         uses: actions/setup-node@v3
         with:
           node-version: '16'
-          cache: pnpm
-      - run: npm i -g pnpm
-      - run: pnpm install --frozen-lockfile
-      - name: Bump
-        uses: actions/setup-node@v3
-        with:
-          node-version: '16'
-      - run: npx bumpp ${{ github.event.inputs.bumpType }}\
+      - run: |
+          npx bumpp ${{ github.event.inputs.bumpType }}\
           "package.json"\
           "packages/*/package.json"\
           --commit ${{ github.event.inputs.commitMsg}}\
           --push\
           --tag
-      - name: Publish
+
+      - name: Publish Package
         uses: actions/setup-node@v3
         with:
           node-version: '16'
           registry-url: 'https://registry.npmjs.org/'
-          cache: pnpm
           scope: '@vue-storefront'
-      - run: echo "" >> .npmrc\
+      - run: |
+          echo "" >> .npmrc\
           && echo "//registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN}" >> .npmrc\
           && echo "" >> .npmrc\
           && echo "@vue-storefront:registry=https://registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN"}">> .npmrc
