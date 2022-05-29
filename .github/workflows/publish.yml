@@ -67,11 +67,11 @@ jobs:
 
       - name: Bump Version & Push
         run: |
-          npx bumpp ${{ github.event.inputs.bumpType }}\
-          "package.json"\
-          "packages/*/package.json"\
-          --commit ${{ github.event.inputs.commitMsg}}\
-          --push\
+          npx bumpp ${{ github.event.inputs.bumpType }} \
+          "package.json" \
+          "packages/*/package.json" \
+          --commit ${{ github.event.inputs.commitMsg}} \
+          --push \
           --tag
 
       - name: Publish Package
