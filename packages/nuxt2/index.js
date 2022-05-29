@@ -1,21 +1,8 @@
+const glob = require('glob');
+const path = require('path');
+
 module.exports = {
-  overrides: [
-    {
-      files: ['*.vue'],
-      parser: 'vue-eslint-parser',
-      parserOptions: {
-        parser: '@typescript-eslint/parser',
-      },
-      rules: {
-        'no-unused-vars': 'off',
-        'no-undef': 'off',
-        '@typescript-eslint/no-unused-vars': 'off',
-      },
-    },
-  ],
-  extends: [
-    '@vue-storefront/eslint-config-ts',
-    '@nuxtjs/eslint-config-typescript',
-    '@vue-storefront/eslint-config-vue2',
-  ],
+  extends: glob.sync('./config/**/*.js', {
+    cwd: path.resolve(path.join(__dirname)),
+  }).map((currentFile) => require.resolve(path.resolve((path.join(__dirname, currentFile))))),
 }
