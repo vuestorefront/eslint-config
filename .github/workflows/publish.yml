@@ -1,0 +1,59 @@
+name: Publish Packages on NPM
+on:
+  workflow_dispatch:
+    inputs:
+      commitMsg:
+        description: Commit message for release
+        required: false
+        default: 'chore: release new version '
+      bumpType:
+        type: choice
+        description: Bump Release
+        required: true
+        default: patch
+        options:
+          - major
+          - minor
+          - patch
+jobs:
+  publishing:
+    name: Package Publishing
+    runs-on: ubuntu-latest
+    env:
+      NPM_TOKEN: '${{ secrets.NPM_TOKEN }}'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Package Install
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - name: Bump
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+      - run: npx bumpp ${{ github.event.inputs.bumpType }}\
+          "package.json"\
+          "packages/*/package.json"\
+          --commit ${{ github.event.inputs.commitMsg}}\
+          --push\
+          --tag
+      - name: Publish
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+          registry-url: 'https://registry.npmjs.org/'
+          cache: pnpm
+          scope: '@vue-storefront'
+      - run: echo "" >> .npmrc\
+          && echo "//registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN}" >> .npmrc\
+          && echo "" >> .npmrc\
+          && echo "@vue-storefront:registry=https://registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN"}">> .npmrc
+          && echo "" >> .npmrc
+        env:
+          NODE_AUTH_TOKEN: '${{ secrets.NPM_TOKEN }}'
+      - run: pnpm -r publish --access public
+        env:
+          NODE_AUTH_TOKEN: '${{ secrets.NPM_TOKEN }}'
