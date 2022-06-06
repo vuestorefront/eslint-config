@@ -17,7 +17,9 @@
   ],
   "main": "index.js",
   "files": [
-    "index.js"
+    "*.js",
+    "index.js",
+    "config"
   ],
   "scripts": {
     "update:packages": "npx ncu -u --packageFile package.json",
