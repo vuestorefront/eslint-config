@@ -43,7 +43,7 @@
     "@vue/eslint-config-prettier": "^7.0.0",
     "@vue/eslint-config-typescript": "^10.0.0",
     "eslint": ">=8.x.x",
-    "eslint-plugin-vue": ">=8.x.x || >=9.x.x",
+    "eslint-plugin-vue": ">=9.x.x",
     "glob": ">=8.x.x",
     "typescript": ">=4.x",
     "vue-eslint-parser": "^9.0.2"
