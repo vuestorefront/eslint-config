@@ -21,14 +21,14 @@
     "prepare": "husky install"
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.0.1",
-    "@commitlint/config-conventional": "^17.0.0",
-    "@vue-storefront/eslint-config-base": "*",
+    "@commitlint/cli": "^17.0.2",
+    "@commitlint/config-conventional": "^17.0.2",
+    "@vue-storefront/eslint-config-base": "workspace:*",
     "bumpp": "^7.1.1",
     "commitlint-plugin-workspace-scopes": "^1.1.0",
     "husky": "^8.0.1",
-    "lint-staged": "^12.4.2",
-    "npm-check-updates": "^13.0.3",
+    "lint-staged": "^12.5.0",
+    "npm-check-updates": "^13.1.1",
     "prettier": "^2.6.2"
   },
   "lint-staged": {

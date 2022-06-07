@@ -38,11 +38,11 @@
     "@nuxtjs/eslint-config": "latest",
     "@nuxtjs/eslint-config-typescript": "latest",
     "@vue-storefront/eslint-config-ts": "workspace:*",
-    "@vue-storefront/eslint-config-vue": "latest",
-    "glob": ">=8.x.x"
+    "@vue-storefront/eslint-config-vue": "workspace:latest",
+    "glob": "^8.0.3"
   },
   "devDependencies": {
     "eslint": "^8.17.0",
-    "typescript": ">=4.x"
+    "typescript": "^4.7.3"
   }
 }

@@ -52,7 +52,7 @@
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-unicorn": "^42.0.0",
     "eslint-plugin-yml": "^1.0.0",
-    "glob": ">=8.x.x",
+    "glob": "^8.0.3",
     "jsonc-eslint-parser": "^2.1.0",
     "yaml-eslint-parser": "^1.0.1"
   },
