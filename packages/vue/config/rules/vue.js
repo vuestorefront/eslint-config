@@ -43,5 +43,6 @@ module.exports = {
     'vue/no-useless-v-bind': 'error',
     'vue/padding-line-between-blocks': ['error', 'always'],
     'vue/prefer-separate-static-class': 'error',
+    'vue/singleline-html-element-content-newline': 'off',
   },
 }
