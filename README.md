@@ -38,10 +38,10 @@ pnpm add -D eslint @vue-storefront/eslint-config-base
 ```
 
 ### TypeScript Config
-[![npm](https://img.shields.io/npm/v/@vue-storefront/eslint-config-ts)](https://npmjs.com/package/@vue-storefront/eslint-config-ts)
+[![npm](https://img.shields.io/npm/v/@vue-storefront/eslint-config-typescript)](https://npmjs.com/package/@vue-storefront/eslint-config-typescript)
 #### Install
 ```bash
-pnpm add -D eslint @vue-storefront/eslint-config-ts
+pnpm add -D eslint @vue-storefront/eslint-config-typescript
 ```
 
 #### Config `.eslintrc`

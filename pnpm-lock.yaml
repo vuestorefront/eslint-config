@@ -63,7 +63,7 @@ importers:
     specifiers:
       '@nuxtjs/eslint-config': latest
       '@nuxtjs/eslint-config-typescript': latest
-      '@vue-storefront/eslint-config-ts': workspace:^
+      '@vue-storefront/eslint-config-typescript': workspace:^
       '@vue-storefront/eslint-config-vue': workspace:^
       eslint: ^8.17.0
       glob: ^8.0.3
@@ -71,7 +71,7 @@ importers:
     dependencies:
       '@nuxtjs/eslint-config': 10.0.0_pv5w3e62ssxduf5aiwxbc3knra
       '@nuxtjs/eslint-config-typescript': 10.0.0_ud6rd4xtew5bv4yhvkvu24pzm4
-      '@vue-storefront/eslint-config-ts': link:../typescript
+      '@vue-storefront/eslint-config-typescript': link:../typescript
       '@vue-storefront/eslint-config-vue': link:../vue
       glob: 8.0.3
     devDependencies:
@@ -82,7 +82,7 @@ importers:
     specifiers:
       '@nuxtjs/eslint-config': latest
       '@nuxtjs/eslint-config-typescript': latest
-      '@vue-storefront/eslint-config-ts': workspace:^
+      '@vue-storefront/eslint-config-typescript': workspace:^
       '@vue-storefront/eslint-config-vue2': workspace:^
       eslint: ^8.17.0
       glob: ^8.0.3
@@ -90,7 +90,7 @@ importers:
     dependencies:
       '@nuxtjs/eslint-config': 10.0.0_eslint@8.17.0
       '@nuxtjs/eslint-config-typescript': 10.0.0_ud6rd4xtew5bv4yhvkvu24pzm4
-      '@vue-storefront/eslint-config-ts': link:../typescript
+      '@vue-storefront/eslint-config-typescript': link:../typescript
       '@vue-storefront/eslint-config-vue2': link:../vue2
       glob: 8.0.3
       typescript: 4.7.3
@@ -121,7 +121,7 @@ importers:
   packages/vue:
     specifiers:
       '@vue-storefront/eslint-config-base': workspace:^
-      '@vue-storefront/eslint-config-ts': workspace:^
+      '@vue-storefront/eslint-config-typescript': workspace:^
       '@vue/eslint-config-prettier': ^7.0.0
       '@vue/eslint-config-typescript': ^10.0.0
       eslint: '>=8.17.0'
@@ -131,7 +131,7 @@ importers:
       vue-eslint-parser: ^9.0.2
     dependencies:
       '@vue-storefront/eslint-config-base': link:../base
-      '@vue-storefront/eslint-config-ts': link:../typescript
+      '@vue-storefront/eslint-config-typescript': link:../typescript
       '@vue/eslint-config-prettier': 7.0.0_ddjd75dz7x3czaucyvuaamiqdi
       '@vue/eslint-config-typescript': 10.0.0_ccygvfq7v3yuehad5wr5fa7u6y
       eslint: 8.17.0
@@ -143,7 +143,7 @@ importers:
   packages/vue2:
     specifiers:
       '@vue-storefront/eslint-config-base': workspace:^
-      '@vue-storefront/eslint-config-ts': workspace:^
+      '@vue-storefront/eslint-config-typescript': workspace:^
       '@vue/eslint-config-prettier': ^7.0.0
       '@vue/eslint-config-typescript': ^10.0.0
       eslint: '>=8.17.0'
@@ -153,7 +153,7 @@ importers:
       vue-eslint-parser: ^9.0.2
     dependencies:
       '@vue-storefront/eslint-config-base': link:../base
-      '@vue-storefront/eslint-config-ts': link:../typescript
+      '@vue-storefront/eslint-config-typescript': link:../typescript
       '@vue/eslint-config-prettier': 7.0.0_ddjd75dz7x3czaucyvuaamiqdi
       '@vue/eslint-config-typescript': 10.0.0_ccygvfq7v3yuehad5wr5fa7u6y
       eslint: 8.17.0

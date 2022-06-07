@@ -28,7 +28,7 @@
   },
   "peerDependencies": {
     "@vue-storefront/eslint-config-base": "workspace:^",
-    "@vue-storefront/eslint-config-ts": "workspace:^",
+    "@vue-storefront/eslint-config-typescript": "workspace:^",
     "@vue/eslint-config-prettier": "^7.0.0",
     "@vue/eslint-config-typescript": "^10.0.0",
     "eslint": ">=8.x.x",
@@ -39,7 +39,7 @@
   },
   "dependencies": {
     "@vue-storefront/eslint-config-base": "workspace:^",
-    "@vue-storefront/eslint-config-ts": "workspace:^",
+    "@vue-storefront/eslint-config-typescript": "workspace:^",
     "@vue/eslint-config-prettier": "^7.0.0",
     "@vue/eslint-config-typescript": "^10.0.0",
     "eslint": ">=8.17.0",

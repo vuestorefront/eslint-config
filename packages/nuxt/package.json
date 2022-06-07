@@ -29,7 +29,7 @@
   "peerDependencies": {
     "@nuxtjs/eslint-config": "latest",
     "@nuxtjs/eslint-config-typescript": "latest",
-    "@vue-storefront/eslint-config-ts": "workspace:^",
+    "@vue-storefront/eslint-config-typescript": "workspace:^",
     "@vue-storefront/eslint-config-vue": "workspace:^",
     "eslint": ">=8.x.x",
     "glob": "^8.0.3"
@@ -37,7 +37,7 @@
   "dependencies": {
     "@nuxtjs/eslint-config": "latest",
     "@nuxtjs/eslint-config-typescript": "latest",
-    "@vue-storefront/eslint-config-ts": "workspace:^",
+    "@vue-storefront/eslint-config-typescript": "workspace:^",
     "@vue-storefront/eslint-config-vue": "workspace:^",
     "glob": "^8.0.3"
   },
