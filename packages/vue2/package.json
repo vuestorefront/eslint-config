@@ -1,6 +1,6 @@
 {
   "name": "@vue-storefront/eslint-config-vue2",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "license": "MIT",
   "homepage": "https://github.com/vuestorefront/eslint-config",
   "contributors": [
@@ -26,6 +26,17 @@
     "update:packages": "npx ncu -u --packageFile package.json",
     "update:check": "npx ncu --packageFile package.json"
   },
+  "peerDependencies": {
+    "@vue-storefront/eslint-config-base": "workspace:*",
+    "@vue-storefront/eslint-config-ts": "workspace:*",
+    "@vue/eslint-config-prettier": "^7.0.0",
+    "@vue/eslint-config-typescript": "^10.0.0",
+    "eslint": ">=8.x.x",
+    "eslint-plugin-vue": ">=9.1.0",
+    "glob": ">=8.0.3",
+    "typescript": ">=4.7.3",
+    "vue-eslint-parser": "^9.0.2"
+  },
   "dependencies": {
     "@vue-storefront/eslint-config-base": "workspace:*",
     "@vue-storefront/eslint-config-ts": "workspace:*",
@@ -40,16 +51,5 @@
   "devDependencies": {
     "eslint": "^8.17.0",
     "typescript": ">=4.7.3"
-  },
-  "peerDependencies": {
-    "@vue-storefront/eslint-config-base": "workspace:*",
-    "@vue-storefront/eslint-config-ts": "workspace:*",
-    "@vue/eslint-config-prettier": "^7.0.0",
-    "@vue/eslint-config-typescript": "^10.0.0",
-    "eslint-plugin-vue": ">=9.1.0",
-    "glob": ">=8.0.3",
-    "typescript": ">=4.7.3",
-    "vue-eslint-parser": "^9.0.2",
-    "eslint": ">=8.x.x"
   }
 }
