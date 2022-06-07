@@ -28,7 +28,7 @@
   "peerDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.27.1",
     "@typescript-eslint/parser": "^5.27.1",
-    "@vue-storefront/eslint-config-base": "workspace:*",
+    "@vue-storefront/eslint-config-base": "workspace:^",
     "eslint": ">=8.x.x",
     "eslint-config-airbnb-typescript": "^17.0.0",
     "eslint-import-resolver-typescript": "^2.7.1",
@@ -37,7 +37,7 @@
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^5.27.1",
     "@typescript-eslint/parser": "^5.27.1",
-    "@vue-storefront/eslint-config-base": "workspace:*",
+    "@vue-storefront/eslint-config-base": "workspace:^",
     "eslint-config-airbnb-typescript": "^17.0.0",
     "eslint-import-resolver-typescript": "^2.7.1",
     "glob": "^8.0.3",
