@@ -1,4 +1,4 @@
-const basic = require('@vue-storefront/eslint-config-base');
+const basic = require('@vue-storefront/eslint-config-base/config/overrides');
 
 module.exports = {
   overrides: [...basic.overrides,
