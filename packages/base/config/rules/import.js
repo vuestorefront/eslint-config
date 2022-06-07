@@ -12,6 +12,7 @@ module.exports = {
       'error',
       { esmodule: true, commonjs: true, amd: false },
     ],
+    'import/namespace': 'off',
     'import/no-duplicates': 'error',
     'import/no-named-default': 'error',
     'import/no-webpack-loader-syntax': 'error',

@@ -59,6 +59,7 @@ module.exports = {
       functions: 'always-multiline',
     }],
     'no-param-reassign': 'off',
+    'global-require': 'off',
     // endregion
   },
 }

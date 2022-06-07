@@ -8,7 +8,6 @@ module.exports = {
     'plugin:jsonc/prettier',
     'plugin:jsonc/recommended-with-jsonc',
     'plugin:markdown/recommended',
-    'plugin:n/recommended',
     'plugin:promise/recommended',
     'plugin:unicorn/recommended',
     'plugin:yml/standard',
