@@ -26,23 +26,18 @@
     "update:packages": "npx ncu -u --packageFile package.json",
     "update:check": "npx ncu --packageFile package.json"
   },
-  "peerDependencies": {
-    "@nuxtjs/eslint-config": "latest",
-    "@nuxtjs/eslint-config-typescript": "latest",
-    "@vue-storefront/eslint-config-ts": "workspace:*",
-    "@vue-storefront/eslint-config-vue": "latest",
-    "glob": ">=8.x.x",
-    "typescript": ">=4.x"
-  },
   "dependencies": {
     "@nuxtjs/eslint-config": "latest",
     "@nuxtjs/eslint-config-typescript": "latest",
     "@vue-storefront/eslint-config-ts": "workspace:*",
-    "@vue-storefront/eslint-config-vue": "workspace:latest",
+    "@vue-storefront/eslint-config-vue": "workspace:*",
     "glob": "^8.0.3"
   },
   "devDependencies": {
     "eslint": "^8.17.0",
     "typescript": "^4.7.3"
+  },
+  "peerDependencies": {
+    "eslint": ">=8.x.x"
   }
 }

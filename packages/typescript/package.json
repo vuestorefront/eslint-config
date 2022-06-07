@@ -25,15 +25,6 @@
     "update:packages": "npx ncu -u --packageFile package.json",
     "update:check": "npx ncu --packageFile package.json"
   },
-  "peerDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.27.0",
-    "@typescript-eslint/parser": "^5.27.0",
-    "@vue-storefront/eslint-config-base": "workspace:*",
-    "eslint-config-airbnb-typescript": "^17.0.0",
-    "eslint-import-resolver-typescript": "^2.7.1",
-    "glob": ">=8.x.x",
-    "typescript": ">=4.x"
-  },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^5.27.1",
     "@typescript-eslint/parser": "^5.27.1",
@@ -45,5 +36,8 @@
   },
   "devDependencies": {
     "eslint": "^8.17.0"
+  },
+  "peerDependencies": {
+    "eslint": ">=8.x.x"
   }
 }
