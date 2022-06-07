@@ -15,7 +15,7 @@
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "release": "bumpp package.json packages/*/package.json --commit \"chore: release new version \" --push --tag --no-git-checks && pnpm -r publish --access public",
+    "release": "bumpp package.json packages/*/package.json --commit \"chore: release new version \" --push --tag && pnpm -r publish --access public",
     "update:check": "pnpm -r run update:check",
     "update:packages": "pnpm -r run update:packages",
     "prepare": "husky install"
