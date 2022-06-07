@@ -27,8 +27,11 @@
     "update:check": "npx ncu --packageFile package.json"
   },
   "peerDependencies": {
+    "@nuxtjs/eslint-config": "latest",
+    "@nuxtjs/eslint-config-typescript": "latest",
     "@vue-storefront/eslint-config-ts": "workspace:*",
     "@vue-storefront/eslint-config-vue2": "workspace:*",
+    "glob": "^8.0.3",
     "eslint": ">=8.x.x"
   },
   "dependencies": {

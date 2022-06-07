@@ -29,6 +29,13 @@
   "peerDependencies": {
     "@vue-storefront/eslint-config-base": "workspace:*",
     "@vue-storefront/eslint-config-ts": "workspace:*",
+    "@vue/eslint-config-prettier": "^7.0.0",
+    "@vue/eslint-config-typescript": "^10.0.0",
+    "eslint": ">=8.17.0",
+    "eslint-plugin-vue": ">=9.1.0",
+    "glob": ">=8.0.3",
+    "typescript": ">=4.7.3",
+    "vue-eslint-parser": "^9.0.2",
     "eslint": ">=8.x.x"
   },
   "dependencies": {
