@@ -23,7 +23,7 @@
   "devDependencies": {
     "@commitlint/cli": "^17.0.2",
     "@commitlint/config-conventional": "^17.0.2",
-    "@vue-storefront/eslint-config-base": "workspace:*",
+    "@vue-storefront/eslint-config-base": "1.0.4",
     "bumpp": "^7.1.1",
     "commitlint-plugin-workspace-scopes": "^1.1.0",
     "husky": "^8.0.1",
