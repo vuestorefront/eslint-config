@@ -1,6 +1,6 @@
 {
   "name": "@vue-storefront/eslint-config-vue",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "license": "MIT",
   "homepage": "https://github.com/vuestorefront/eslint-config",
   "contributors": [
@@ -26,6 +26,9 @@
     "update:packages": "npx ncu -u --packageFile package.json",
     "update:check": "npx ncu --packageFile package.json"
   },
+  "peerDependencies": {
+    "eslint": ">=8.x.x"
+  },
   "dependencies": {
     "@vue-storefront/eslint-config-base": "workspace:*",
     "@vue-storefront/eslint-config-ts": "workspace:*",
@@ -40,8 +43,5 @@
   "devDependencies": {
     "eslint": "^8.17.0",
     "typescript": ">=4.7.3"
-  },
-  "peerDependencies": {
-    "eslint": ">=8.x.x"
   }
 }
