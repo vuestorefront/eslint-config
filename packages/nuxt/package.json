@@ -27,6 +27,8 @@
     "update:check": "npx ncu --packageFile package.json"
   },
   "peerDependencies": {
+    "@vue-storefront/eslint-config-ts": "workspace:*",
+    "@vue-storefront/eslint-config-vue": "workspace:*",
     "eslint": ">=8.x.x"
   },
   "dependencies": {
