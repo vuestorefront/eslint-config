@@ -34,12 +34,25 @@ This configuration provides eslint rules for the following:
 [📖 &nbsp;Read more]()
 
 ## Usage
-
-### Base Config
+### All Configs
 [![npm](https://img.shields.io/npm/v/@vue-storefront/eslint-config)](https://npmjs.com/package/@vue-storefront/eslint-config)
 #### Install
 ```bash
 pnpm add -D eslint @vue-storefront/eslint-config
+```
+
+#### Config `.eslintrc`
+```json
+{
+  "extends": "@vue-storefront"
+}
+```
+
+### Base Config
+[![npm](https://img.shields.io/npm/v/@vue-storefront/eslint-config-base)](https://npmjs.com/package/@vue-storefront/eslint-config-base)
+#### Install
+```bash
+pnpm add -D eslint @vue-storefront/eslint-config-base
 ```
 
 #### Config `.eslintrc`
