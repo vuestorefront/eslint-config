@@ -20,8 +20,7 @@ module.exports = {
     'import/no-unresolved': 'error',
     'import/extensions': ['error',
       {
-        'ignorePackages': true,
-        'pattern': extensions.map((extension) => ({ [extension]: 'never' })),
+        ...extensions.map((extension) => ({ [extension]: 'never' })),
       },
     ],
   },

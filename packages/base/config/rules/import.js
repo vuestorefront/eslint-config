@@ -34,8 +34,7 @@ module.exports = {
     'import/no-named-as-default-member': 'off',
     'import/extensions': ['error',
       {
-        'ignorePackages': true,
-        'pattern': extensions.map((extension) => ({ [extension]: 'never' })),
+        ...extensions.map((extension) => ({ [extension]: 'never' })),
       },
     ],
 // endregion
