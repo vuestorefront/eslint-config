@@ -31,8 +31,6 @@ This configuration provides eslint rules for the following:
 - YAML / YML
 - Markdown
 
-[📖 &nbsp;Read more]()
-
 ## Usage
 ### All Configs
 [![npm](https://img.shields.io/npm/v/@vue-storefront/eslint-config)](https://npmjs.com/package/@vue-storefront/eslint-config)
