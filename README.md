@@ -41,7 +41,7 @@ pnpm add -D eslint @vue-storefront/eslint-config
 #### Config `.eslintrc`
 ```json
 {
-  "extends": "@vue-storefront"
+  "extends": "@vue-storefront/eslint-config"
 }
 ```
 
@@ -55,15 +55,6 @@ pnpm add -D eslint @vue-storefront/eslint-config-base
 ```json
 {
   "extends": "@vue-storefront/eslint-config",
-  "settings": {
-    "import/resolver": {
-      "typescript": {
-        "project": [
-          "tsconfig.json"
-        ]
-      }
-    }
-  }
 }
 ```
 
@@ -77,15 +68,6 @@ pnpm add -D eslint @vue-storefront/eslint-config-typescript
 ```json
 {
   "extends": "@vue-storefront/eslint-config-typescript",
-  "settings": {
-    "import/resolver": {
-      "typescript": {
-        "project": [
-          "tsconfig.json"
-        ]
-      }
-    }
-  }
 }
 ```
 
@@ -99,16 +81,6 @@ pnpm add -D eslint @vue-storefront/eslint-config-nuxt
 ```json
 {
   "extends": "@vue-storefront/eslint-config-nuxt",
-  "settings": {
-    "import/resolver": {
-      "typescript": {
-        "project": [
-          ".nuxt/tsconfig.json",
-          "tsconfig.json"
-        ]
-      }
-    }
-  }
 }
 ```
 
@@ -122,15 +94,6 @@ pnpm add -D eslint @vue-storefront/eslint-config-nuxt2
 ```json
 {
   "extends": "@vue-storefront/eslint-config-nuxt2",
-  "settings": {
-    "import/resolver": {
-      "typescript": {
-        "project": [
-          "tsconfig.json"
-        ]
-      }
-    }
-  }
 }
 ```
 
@@ -144,15 +107,6 @@ pnpm add -D eslint @vue-storefront/eslint-config-vue
 ```json
 {
   "extends": "@vue-storefront/eslint-config-vue",
-  "settings": {
-    "import/resolver": {
-      "typescript": {
-        "project": [
-          "tsconfig.json"
-        ]
-      }
-    }
-  }
 }
 ```
 
@@ -167,15 +121,6 @@ pnpm add -D eslint @vue-storefront/eslint-config-vue2
 ```json
 {
   "extends": "@vue-storefront/eslint-config-vue2",
-  "settings": {
-    "import/resolver": {
-      "typescript": {
-        "project": [
-          "tsconfig.json"
-        ]
-      }
-    }
-  }
 }
 ```
 
@@ -208,7 +153,7 @@ Or locally:
 
 [MIT License](./LICENSE)
 
-Copyright (c) Nuxt Team
+Copyright (c) Vue Storefront
 
 <!-- Badges -->
 [npm-version-src]: https://img.shields.io/npm/v/@vue-storefront/eslint-config/latest.svg

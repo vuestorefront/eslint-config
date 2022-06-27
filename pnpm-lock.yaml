@@ -26,18 +26,12 @@ importers:
 
   packages/all:
     specifiers:
-      '@nuxtjs/eslint-config': latest
-      '@nuxtjs/eslint-config-typescript': latest
-      '@vue-storefront/eslint-config-typescript': workspace:^
-      '@vue-storefront/eslint-config-vue': workspace:^
+      '@vue-storefront/eslint-config-nuxt': workspace:^
       eslint: ^8.18.0
       glob: ^8.0.3
       typescript: ^4.7.4
     dependencies:
-      '@nuxtjs/eslint-config': 10.0.0_eslint@8.18.0
-      '@nuxtjs/eslint-config-typescript': 10.0.0_b5e7v2qnwxfo6hmiq56u52mz3e
-      '@vue-storefront/eslint-config-typescript': link:../typescript
-      '@vue-storefront/eslint-config-vue': link:../vue
+      '@vue-storefront/eslint-config-nuxt': link:../nuxt
       glob: 8.0.3
       typescript: 4.7.4
     devDependencies:
@@ -4886,7 +4880,7 @@ packages:
     dev: true
 
   /strip-bom/3.0.0:
-    resolution: {integrity: sha1-IzTBjpx1n3vdVv3vfprj1YjmjtM=}
+    resolution: {integrity: sha512-vavAMRXOgBVNF6nyEEmL3DBK19iRpDcoIwW+swQ+CbGiu7lju6t+JklA1MHweoWtadgt4ISVUsXLyDq34ddcwA==}
     engines: {node: '>=4'}
 
   /strip-final-newline/2.0.0:
