@@ -27,11 +27,7 @@ module.exports = {
         format: ['PascalCase', 'UPPER_CASE'],
       },
     ],
-    '@typescript-eslint/restrict-template-expressions': ['error', {
-      allowNumber: true,
-      allowBoolean: true,
-      allowAny: true,
-    }],
+    '@typescript-eslint/restrict-template-expressions': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
     'require-await': 'off',
     '@typescript-eslint/require-await': 'error',

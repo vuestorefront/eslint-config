@@ -1,17 +1,3 @@
-const extensions = [
-  '.cjs',
-  '.html',
-  '.js',
-  '.json',
-  '.json5',
-  '.jsonc',
-  '.jsx',
-  '.md',
-  '.mjs',
-  '.yaml',
-  '.yml',
-];
-
 module.exports = {
   rules: {
     // region IMPORT RULES
@@ -33,8 +19,22 @@ module.exports = {
     'import/no-named-as-default': 'off',
     'import/no-named-as-default-member': 'off',
     'import/extensions': ['error',
+      'ignorePackages',
       {
-        ...extensions.map((extension) => ({ [extension]: 'never' })),
+        '.cjs': 'never',
+        '.html': 'never',
+        '.js': 'never',
+        '.json': 'never',
+        '.json5': 'never',
+        '.jsonc': 'never',
+        '.jsx': 'never',
+        '.md': 'never',
+        '.mjs': 'never',
+        '.ts': 'never',
+        '.tsx': 'never',
+        '.vue': 'never',
+        '.yaml': 'never',
+        '.yml': 'never',
       },
     ],
 // endregion
