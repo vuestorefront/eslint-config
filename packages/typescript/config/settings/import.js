@@ -1,10 +1,12 @@
 module.exports = {
   settings: {
     'import/parsers': {
-      'import/extensions': ['.js', '.jsx', '.mjs', '.cjs', '.ts', '.tsx', '.vue'],
+      '@typescript-eslint/parser': ['.js', '.jsx', '.mjs', '.cjs', '.ts', '.tsx', '.vue'],
     },
     'import/resolver': {
-      node: { extensions: ['.js', '.jsx', '.mjs', '.cjs', '.ts', '.tsx', '.vue', '.d.ts'] },
+      node: {
+        extensions: ['.js', '.jsx', '.mjs', '.cjs', '.ts', '.tsx', '.vue'],
+      },
       typescript: {
         alwaysTryTypes: true,
       },

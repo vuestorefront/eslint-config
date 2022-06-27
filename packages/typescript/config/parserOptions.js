@@ -5,7 +5,7 @@ module.exports = {
     sourceType: 'module',
     ecmaFeatures: {
       globalReturn: false,
-      impliedStrict: false,
+      impliedStrict: true,
       jsx: true,
     },
     extraFileExtensions: [
