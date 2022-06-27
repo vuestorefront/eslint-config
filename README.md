@@ -1,4 +1,14 @@
+[![vuestorefront/eslint-config](./cover.png)]()
+
 # @vue-storefront/eslint-config
+
+[![npm version][npm-version-src]][npm-version-href]
+[![npm downloads][npm-downloads-src]][npm-downloads-href]
+[![License][license-src]][license-href]
+
+> Vue Storefront eslint standards
+
+## Information
 
 Eslint configuration for:
 - JavaScript
@@ -21,13 +31,15 @@ This configuration provides eslint rules for the following:
 - YAML / YML
 - Markdown
 
+[📖 &nbsp;Read more]()
+
 ## Usage
 
 ### Base Config
-[![npm](https://img.shields.io/npm/v/@vue-storefront/eslint-config-base)](https://npmjs.com/package/@vue-storefront/eslint-config-base)
+[![npm](https://img.shields.io/npm/v/@vue-storefront/eslint-config)](https://npmjs.com/package/@vue-storefront/eslint-config)
 #### Install
 ```bash
-pnpm add -D eslint @vue-storefront/eslint-config-base
+pnpm add -D eslint @vue-storefront/eslint-config
 ```
 
 #### Config `.eslintrc`
@@ -121,6 +133,30 @@ Update your `.vscode/settings.json` and add the following
 }
 ```
 
+## Contributing
+
+You can contribute to this module online with CodeSandBox:
+
+[![Edit @vuestorefront/eslint-config](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/vuestorefront/eslint-config/tree/main/?fontsize=14&hidenavigation=1&theme=dark)
+
+Or locally:
+
+1. Clone this repository
+2. Install dependencies using `yarn install` or `npm install`
+3. Start development server using `yarn dev` or `npm run dev`
+
 ## License
 
-MIT
+[MIT License](./LICENSE)
+
+Copyright (c) Nuxt Team
+
+<!-- Badges -->
+[npm-version-src]: https://img.shields.io/npm/v/@vue-storefront/eslint-config/latest.svg
+[npm-version-href]: https://npmjs.com/package/@vue-storefront/eslint-config
+
+[npm-downloads-src]: https://img.shields.io/npm/dm/@vue-storefront/eslint-config.svg
+[npm-downloads-href]: https://npmjs.com/package/@vue-storefront/eslint-config
+
+[license-src]: https://img.shields.io/npm/l/@vue-storefront/eslint-config
+[license-href]: https://npmjs.com/package/@vue-storefront/eslint-config

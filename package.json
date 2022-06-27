@@ -5,6 +5,7 @@
   "packageManager": "pnpm@7.1.6",
   "license": "MIT",
   "homepage": "https://github.com/vuestorefront/eslint-config",
+  "repository": "vuestorefront/eslint-config",
   "contributors": [
     {
       "name": "Heitor Ramon Ribeiro",
