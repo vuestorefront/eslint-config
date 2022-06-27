@@ -54,7 +54,16 @@ pnpm add -D eslint @vue-storefront/eslint-config-base
 #### Config `.eslintrc`
 ```json
 {
-  "extends": "@vue-storefront/eslint-config"
+  "extends": "@vue-storefront/eslint-config",
+  "settings": {
+    "import/resolver": {
+      "typescript": {
+        "project": [
+          "tsconfig.json"
+        ]
+      }
+    }
+  }
 }
 ```
 
@@ -67,7 +76,16 @@ pnpm add -D eslint @vue-storefront/eslint-config-typescript
 #### Config `.eslintrc`
 ```json
 {
-  "extends": "@vue-storefront/eslint-config-typescript"
+  "extends": "@vue-storefront/eslint-config-typescript",
+  "settings": {
+    "import/resolver": {
+      "typescript": {
+        "project": [
+          "tsconfig.json"
+        ]
+      }
+    }
+  }
 }
 ```
 
@@ -80,7 +98,17 @@ pnpm add -D eslint @vue-storefront/eslint-config-nuxt
 #### Config `.eslintrc`
 ```json
 {
-  "extends": "@vue-storefront/eslint-config-nuxt"
+  "extends": "@vue-storefront/eslint-config-nuxt",
+  "settings": {
+    "import/resolver": {
+      "typescript": {
+        "project": [
+          ".nuxt/tsconfig.json",
+          "tsconfig.json"
+        ]
+      }
+    }
+  }
 }
 ```
 
@@ -93,7 +121,16 @@ pnpm add -D eslint @vue-storefront/eslint-config-nuxt2
 #### Config `.eslintrc`
 ```json
 {
-  "extends": "@vue-storefront/eslint-config-nuxt2"
+  "extends": "@vue-storefront/eslint-config-nuxt2",
+  "settings": {
+    "import/resolver": {
+      "typescript": {
+        "project": [
+          "tsconfig.json"
+        ]
+      }
+    }
+  }
 }
 ```
 
@@ -106,7 +143,16 @@ pnpm add -D eslint @vue-storefront/eslint-config-vue
 #### Config `.eslintrc`
 ```json
 {
-  "extends": "@vue-storefront/eslint-config-vue"
+  "extends": "@vue-storefront/eslint-config-vue",
+  "settings": {
+    "import/resolver": {
+      "typescript": {
+        "project": [
+          "tsconfig.json"
+        ]
+      }
+    }
+  }
 }
 ```
 
@@ -120,7 +166,16 @@ pnpm add -D eslint @vue-storefront/eslint-config-vue2
 #### Config `.eslintrc`
 ```json
 {
-  "extends": "@vue-storefront/eslint-config-vue2"
+  "extends": "@vue-storefront/eslint-config-vue2",
+  "settings": {
+    "import/resolver": {
+      "typescript": {
+        "project": [
+          "tsconfig.json"
+        ]
+      }
+    }
+  }
 }
 ```
 
