@@ -31,7 +31,7 @@
     "@nuxtjs/eslint-config-typescript": "latest",
     "@vue-storefront/eslint-config-typescript": "workspace:^",
     "@vue-storefront/eslint-config-vue": "workspace:^",
-    "eslint": ">=8.x.x",
+    "eslint": "^8.x.x",
     "glob": "^8.0.3"
   },
   "dependencies": {
@@ -39,7 +39,8 @@
     "@nuxtjs/eslint-config-typescript": "latest",
     "@vue-storefront/eslint-config-typescript": "workspace:^",
     "@vue-storefront/eslint-config-vue": "workspace:^",
-    "glob": "^8.0.3"
+    "glob": "^8.0.3",
+    "typescript": "^4.7.4"
   },
   "devDependencies": {
     "eslint": "^8.18.0",

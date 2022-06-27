@@ -26,24 +26,26 @@
     "update:check": "npx ncu --packageFile package.json"
   },
   "peerDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.29.0",
-    "@typescript-eslint/parser": "^5.29.0",
+    "@typescript-eslint/eslint-plugin": "^5.30.0",
+    "@typescript-eslint/parser": "^5.30.0",
     "@vue-storefront/eslint-config-base": "workspace:^",
-    "eslint": ">=8.x.x",
+    "eslint": "^8.x.x",
     "eslint-config-airbnb-typescript": "^17.0.0",
-    "eslint-import-resolver-typescript": "^3.1.0",
+    "eslint-import-resolver-typescript": "^3.1.1",
     "eslint-plugin-import": "^2.26.0",
-    "glob": "^8.0.3"
+    "glob": "^8.0.3",
+    "typescript": "^4.7.4"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.29.0",
-    "@typescript-eslint/parser": "^5.29.0",
+    "@typescript-eslint/eslint-plugin": "^5.30.0",
+    "@typescript-eslint/parser": "^5.30.0",
     "@vue-storefront/eslint-config-base": "workspace:^",
-    "eslint": ">=8.x.x",
+    "eslint": "^8.x.x",
     "eslint-config-airbnb-typescript": "^17.0.0",
-    "eslint-import-resolver-typescript": "^3.1.0",
+    "eslint-import-resolver-typescript": "^3.1.1",
     "eslint-plugin-import": "^2.26.0",
-    "glob": "^8.0.3"
+    "glob": "^8.0.3",
+    "typescript": "^4.7.4"
   },
   "devDependencies": {
     "eslint": "^8.18.0"
