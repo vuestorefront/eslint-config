@@ -39,7 +39,7 @@ pnpm add -D eslint @vue-storefront/eslint-config
 ```
 
 #### Config `.eslintrc`
-```json
+```json{}[.eslintrc]
 {
   "extends": "@vue-storefront/eslint-config"
 }
@@ -52,9 +52,9 @@ pnpm add -D eslint @vue-storefront/eslint-config-base
 ```
 
 #### Config `.eslintrc`
-```json
+```json{}[.eslintrc]
 {
-  "extends": "@vue-storefront/eslint-config",
+  "extends": "@vue-storefront/eslint-config-base"
 }
 ```
 
@@ -65,9 +65,9 @@ pnpm add -D eslint @vue-storefront/eslint-config-typescript
 ```
 
 #### Config `.eslintrc`
-```json
+```json{}[.eslintrc]
 {
-  "extends": "@vue-storefront/eslint-config-typescript",
+  "extends": "@vue-storefront/eslint-config-typescript"
 }
 ```
 
@@ -78,9 +78,9 @@ pnpm add -D eslint @vue-storefront/eslint-config-nuxt
 ```
 
 #### Config `.eslintrc`
-```json
+```json{}[.eslintrc]
 {
-  "extends": "@vue-storefront/eslint-config-nuxt",
+  "extends": "@vue-storefront/eslint-config-nuxt"
 }
 ```
 
@@ -91,9 +91,9 @@ pnpm add -D eslint @vue-storefront/eslint-config-nuxt2
 ```
 
 #### Config `.eslintrc`
-```json
+```json{}[.eslintrc]
 {
-  "extends": "@vue-storefront/eslint-config-nuxt2",
+  "extends": "@vue-storefront/eslint-config-nuxt2"
 }
 ```
 
@@ -104,9 +104,9 @@ pnpm add -D eslint @vue-storefront/eslint-config-vue
 ```
 
 #### Config `.eslintrc`
-```json
+```json{}[.eslintrc]
 {
-  "extends": "@vue-storefront/eslint-config-vue",
+  "extends": "@vue-storefront/eslint-config-vue"
 }
 ```
 
@@ -118,9 +118,9 @@ pnpm add -D eslint @vue-storefront/eslint-config-vue2
 ```
 
 #### Config `.eslintrc`
-```json
+```json{}[.eslintrc]
 {
-  "extends": "@vue-storefront/eslint-config-vue2",
+  "extends": "@vue-storefront/eslint-config-vue2"
 }
 ```
 
