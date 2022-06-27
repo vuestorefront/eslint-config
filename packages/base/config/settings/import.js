@@ -1,11 +1,18 @@
+const extensions = [
+  '.cjs',
+  '.html',
+  '.json',
+  '.json5',
+  '.jsonc',
+  '.jsx',
+  '.md',
+  '.mjs',
+  '.yaml',
+  '.yml',
+];
+
 module.exports = {
   settings: {
-    'import/extensions': ['.js', '.jsx', '.mjs', '.ts', '.tsx', '.vue'],
-    'import/resolver': {
-      node: {
-        extensions: ['.js', '.jsx', '.mjs', '.ts', '.tsx', '.vue'],
-      },
-      typescript: {},
-    },
+    'import/extensions': extensions,
   },
 }

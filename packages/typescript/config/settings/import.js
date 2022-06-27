@@ -1,12 +1,27 @@
+const extensions = [
+  '.cjs',
+  '.html',
+  '.js',
+  '.json',
+  '.json5',
+  '.jsonc',
+  '.jsx',
+  '.md',
+  '.mjs',
+  '.ts',
+  '.tsx',
+  '.vue',
+  '.yaml',
+  '.yml',
+];
+
 module.exports = {
   settings: {
     'import/parsers': {
-      '@typescript-eslint/parser': ['.js', '.jsx', '.mjs', '.cjs', '.ts', '.tsx', '.vue'],
+      '@typescript-eslint/parser': extensions,
     },
+    'import/extensions': extensions,
     'import/resolver': {
-      node: {
-        extensions: ['.js', '.jsx', '.mjs', '.cjs', '.ts', '.tsx', '.vue'],
-      },
       typescript: {
         alwaysTryTypes: true,
       },

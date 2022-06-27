@@ -1,3 +1,17 @@
+const extensions = [
+  '.cjs',
+  '.html',
+  '.js',
+  '.json',
+  '.json5',
+  '.jsonc',
+  '.jsx',
+  '.md',
+  '.mjs',
+  '.yaml',
+  '.yml',
+];
+
 module.exports = {
   rules: {
     // region IMPORT RULES
@@ -5,7 +19,6 @@ module.exports = {
     'import/named': 'off',
     'import/no-cycle': 'off',
     'import/prefer-default-export': 'off',
-    'import/extensions': 'off',
     'import/export': 'error',
     'import/first': 'error',
     'import/no-absolute-path': [
@@ -19,6 +32,12 @@ module.exports = {
     'import/no-webpack-loader-syntax': 'error',
     'import/no-named-as-default': 'off',
     'import/no-named-as-default-member': 'off',
+    'import/extensions': ['error',
+      {
+        'ignorePackages': true,
+        'pattern': extensions.map((extension) => ({ [extension]: 'never' })),
+      },
+    ],
 // endregion
   },
 }
