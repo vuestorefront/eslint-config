@@ -11,7 +11,6 @@ module.exports = {
     'vue/require-default-prop': 'off',
     'vue/multi-word-component-names': 'off',
     'vue/prefer-import-from-vue': 'off',
-    // reactivity transform
     'vue/no-setup-props-destructure': 'off',
     'vue/component-tags-order': [
       'error',
@@ -44,5 +43,15 @@ module.exports = {
     'vue/padding-line-between-blocks': ['error', 'always'],
     'vue/prefer-separate-static-class': 'error',
     'vue/singleline-html-element-content-newline': 'off',
+    'vue/no-multiple-template-root': 'off',
+    'vue/html-self-closing': 'off',
+    'vue/html-closing-bracket-spacing': [
+      'error',
+      {
+        'startTag': 'never',
+        'endTag': 'never',
+        'selfClosingTag': 'always',
+      },
+    ],
   },
 }

@@ -13,9 +13,12 @@ module.exports = {
       { esmodule: true, commonjs: true, amd: false },
     ],
     'import/namespace': 'off',
+    'import/default': 'off',
     'import/no-duplicates': 'error',
     'import/no-named-default': 'error',
     'import/no-webpack-loader-syntax': 'error',
+    'import/no-named-as-default': 'off',
+    'import/no-named-as-default-member': 'off',
 // endregion
   },
 }

@@ -9,6 +9,7 @@ module.exports = {
     'unicorn/no-new-array': 'off',
     'unicorn/no-array-reduce': 'off',
     'unicorn/prefer-array-some': 'off',
+    'unicorn/prevent-abbreviations': 'off',
     'unicorn/catch-error-name': [
       2,
       {
