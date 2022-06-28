@@ -18,5 +18,8 @@ const extensions = [
 module.exports = {
   settings: {
     'import/extensions': extensions,
+    'import/resolver': {
+      node: { extensions: ['.js', '.mjs'] }
+    }
   },
 }

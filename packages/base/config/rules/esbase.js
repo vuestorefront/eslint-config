@@ -37,6 +37,11 @@ module.exports = {
         },
       },
     ],
+    'generator-star-spacing': 'off',
+    'prefer-const': ['error', {
+      destructuring: 'any',
+      ignoreReadBeforeAssign: false
+    }],
     'symbol-description': 'error',
     'template-curly-spacing': ['error', 'always'],
     'unicode-bom': ['error', 'never'],

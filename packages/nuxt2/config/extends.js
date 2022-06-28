@@ -4,4 +4,7 @@ module.exports = {
     '@nuxtjs/eslint-config-typescript',
     '@vue-storefront/eslint-config-vue2',
   ],
+  parserOptions: {
+    project: ['tsconfig.json'],
+  },
 }

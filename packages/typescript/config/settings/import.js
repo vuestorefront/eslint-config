@@ -18,7 +18,7 @@ const extensions = [
 module.exports = {
   settings: {
     'import/parsers': {
-      '@typescript-eslint/parser': extensions,
+      '@typescript-eslint/parser': ['.ts', '.tsx'],
     },
     'import/extensions': extensions,
     'import/resolver': {

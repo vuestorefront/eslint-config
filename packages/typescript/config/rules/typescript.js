@@ -31,5 +31,7 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': 'off',
     'require-await': 'off',
     '@typescript-eslint/require-await': 'error',
+    'no-unused-vars': 'off',
+    'no-undef': 'off',
   },
 }
