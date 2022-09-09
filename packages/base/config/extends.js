@@ -2,7 +2,6 @@ module.exports = {
   extends: [
     'airbnb-base',
     'eslint:recommended',
-    'plugin:eslint-comments/recommended',
     'plugin:import/recommended',
     'plugin:jsonc/prettier',
     'plugin:jsonc/recommended-with-jsonc',
